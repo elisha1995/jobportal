@@ -46,6 +46,7 @@ public class WebSecurityConfig {
 
         http.authorizeHttpRequests(auth -> {
             auth.requestMatchers(publicUrl).permitAll();
+            auth.requestMatchers("/dashboard").authenticated();
             auth.anyRequest().authenticated();
         });
 

@@ -21,6 +21,7 @@ public class JobPostActivityController {
 
     @GetMapping("/dashboard")
     public String searchJobs(Model model) {
+        System.out.println("Dashboard endpoint hit");
 
         Object currentUserProfile = usersService.getCurrentUserProfile();
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
